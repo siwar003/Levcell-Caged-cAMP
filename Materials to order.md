@@ -22,9 +22,6 @@ at 700g for 3 min. Protein sample was then
 alkalinized by adding to equilibration buffer in
 ratio 1:10 and loaded on SAX material by
 centrifugation at 200g for 10 min. Proteins
-(which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission.
-bioRxiv preprint doi: https://doi.org/10.1101/2025.05.29.656770; this version posted June 1, 2025. The copyright holder for this preprint
-20
 were then on-tip digested by adding 5 µl of
 digestion buffer (0.25 µg/µl trypsin/LysC mix
 in 50 mM TEAB) and centrifuging for 20 sec
