@@ -1,14 +1,14 @@
 
-# Reagents/Materials needed
-###	Forskolin (10 mg) 
-###	IBMX (50 mg) 
-###	DMNB-caged cAMP OR DEACM-caged cAMP **NOTE**: I could not find a vendor that sells DMNB-caged cAMP; DEACM-cAMP is an alternative, but it is more light-sensitive than DMNB-cAMP and requires different loading/uncaging parameters. 
-###	cAMP-dependent protein kinase A catalytic subunit (Promega, 1 x 2,500 u)
-###	Kemptide PKA peptide substrate (Promega, 10 mg/mL)
-###	ATP 100 mM stock solution
-###	Western blot antibodies: anti-CREB, anti-pCREB (Ser133), anti-PKA pan-substrate, anti-VASP (Ser157).
-###	TMT-Pro reagents (check what we have)
-### nanoPhos workflow: 
+# - Reagents/Materials needed
+###	- Forskolin (10 mg) 
+###	- IBMX (50 mg) 
+###	- DMNB-caged cAMP OR DEACM-caged cAMP **NOTE**: I could not find a vendor that sells DMNB-caged cAMP; DEACM-cAMP is an alternative, but it is more light-sensitive than DMNB-cAMP and requires different loading/uncaging parameters. 
+###	- cAMP-dependent protein kinase A catalytic subunit (Promega, 1 x 2,500 u)
+###	- Kemptide PKA peptide substrate (Promega, 10 mg/mL)
+###	- ATP 100 mM stock solution
+###	- Western blot antibodies: anti-CREB, anti-pCREB (Ser133), anti-PKA pan-substrate, anti-VASP (Ser157).
+###	 -TMT-Pro reagents (check what we have)
+###  -nanoPhos workflow: 
 For low input phosphoproteomics during phases 3-4 (look at uPhos or nanoPhos)
 SPEC tips were prepared by placing two plugs
 of strong-anion-exchange (SAX) material (3M
