@@ -8,7 +8,8 @@
 ###	ATP 100 mM stock solution
 ###	Western blot antibodies: anti-CREB, anti-pCREB (Ser133), anti-PKA pan-substrate, anti-VASP (Ser157).
 ###	TMT-Pro reagents (check what we have)
-•	For low input phosphoproteomics during phases 3-4 (look at uPhos or nanoPhos)
+### nanoPhos workflow: 
+For low input phosphoproteomics during phases 3-4 (look at uPhos or nanoPhos)
 SPEC tips were prepared by placing two plugs
 of strong-anion-exchange (SAX) material (3M
 Empore) in a pipette tip with a blunt-ended
