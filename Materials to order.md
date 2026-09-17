@@ -1,4 +1,4 @@
-# Required Materials
+# Required Materials (not final)
 **Date:** 9/17/2026
 
 - Forskolin (10 mg)
