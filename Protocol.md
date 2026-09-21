@@ -49,10 +49,10 @@
 
 **Goal:** Confirm that UV-uncaged cAMP reproduces the forskolin response and establish loading/uncaging parameters.
 
-**Materials:** DMNB-caged cAMP or DEACM-caged cAMP. DMNB-caged cAMP was discontinued by Thermofisher and seems hard to source. DEACM-cAMP is a good alternative, as it is more available, has a much higher quantum yield, and requires near-visible light wavelengths to uncage (prevents any phototoxicity); UV light source (340–370 nm; a filtered xenon lamp, LED UV source, or the same laser/UV module planned for the levitator); HEPES-buffered saline for loading (avoid bicarbonate buffers to prevent pH drift under UV/handling).
+**Materials:** DMNB-caged cAMP or DEACM-caged cAMP. DMNB-caged cAMP was discontinued by Thermofisher and seems hard to source. DEACM-cAMP is a good alternative, as it is more available, has a much higher quantum yield, and requires near-visible light wavelengths to uncage (prevents any phototoxicity); UV light source (340–370 nm or 375-410 nm; a filtered xenon lamp, LED UV source, or the same laser/UV module planned for the levitator); HEPES-buffered saline for loading (avoid bicarbonate buffers to prevent pH drift under UV/handling).
 
 **Protocol:**
-1. Serum-starved HEK293 cells in 6-well plates 4–6 hours prior to treatment with caged cAMP. Each well should contain 2 mL of media.
+1. Serum-starve HEK293 cells in 6-well plates 4–6 hours prior to treatment with caged cAMP. Each well should contain 2 mL of media.
 2. Dissolve caged cAMP in DMSO buffer to create 10 mM stock. Perform all steps in dark conditions and cover in aluminum foil to store in a dark place.
 3. Dilute the caged cAMP into pre-warmed (37 °C) HEPES-buffered saline loading buffer. Aim for a final concentration of 200 µM in each well if using DMNB-caged cAMP⁶,⁷. If using DEACM-cAMP, aim for 10–30 µM per well. Aliquot into 5–25 µL vials using PCR tubes and store to avoid repeated freeze-thaw cycles. Keep DMSO 0.1–1% to avoid toxicity; match vehicle controls to same DMSO concentration⁸.
 4. Aspirate serum-low media from HEK cells and wash twice with warm, blank loading buffer (HEPES buffer). Pipette the loading buffer (with caged cAMP) gently against the walls of the plate as to not detach the cells.
@@ -74,7 +74,7 @@
 
 ---
 
-## Phase 3: Instrument Characterization on the Levitator
+## Phase 3: Instrument Characterization on the Levcell
 
 **Goal:** Characterize the platform independent of cell biology: how fast does the droplet mix, how fast does the quench actually stop a reaction, and how much jitter exists between trigger and quench.
 
@@ -89,7 +89,7 @@ This directly benchmarks whether your denaturant quench (Section 5.6) actually s
 
 #### 3c(i). Enzyme Linearity Assay and Steady-State Kinetics
 
-**Objective:** Establish a well-characterized biochemical PKA phosphorylation reaction that can be used to compare conventional solution-phase reactions with reactions performed in the LevCell. Phosphorylation of Kemptide will be monitored directly by LC-MS/MS.
+**Objective:** Reproduce a well-established phosphorylation reaction in the Levcell and compare directly to conventional tube-based methods. Phosphorylation of Kemptide by PKA will be monitored directly by LC-MS/MS.
 
 **Optimizing reaction conditions:**
 
@@ -117,7 +117,7 @@ In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 
 
 **Negative control:** Include a no-Kemptide control containing PKA, ATP, Mg²⁺, and reaction buffer. This control will identify background LC-MS/MS signals and potential interfering species.
 
-#### 3c(ii). Determining the Precision and Effectiveness of LevCell Reaction Quenching, Compared to Tube Performance
+#### 3c(ii). Determining the Precision and Effectiveness of Levcell Reaction Quenching, Compared to Tube Performance
 
 **Objective:** Determine whether the LevCell quench terminates PKA-mediated phosphorylation rapidly and reproducibly, with minimal post-quench enzymatic activity.
 
@@ -127,7 +127,7 @@ In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 
 
 Concentrate the components such that mixing 4 µL of Stock A with 1 µL of Stock B produces the desired final reaction concentrations.
 
-**LevCell reaction and quench:**
+**Levcell reaction and quench:**
 1. Levitate a 4 µL droplet of Stock A.
 2. Initiate the reaction by adding 1 µL of Stock B.
 3. Allow the reaction to proceed for defined time intervals, before adding quench droplet:
@@ -137,7 +137,7 @@ Concentrate the components such that mixing 4 µL of Stock A with 1 µL of Stock
    - 15 min
    - 20 min
    - 25 min
-4. At each time point, rapidly transfer/quench the reaction using the validated acidic quench.
+4. At each time point, rapidly transfer/quench the reaction using 1 µL of SDC/Tris quench buffer.
 5. Analyze phospho-Kemptide directly by LC-MS/MS without enzymatic digestion.
 
 The primary measurement will be phospho-Kemptide concentration as a function of time.
@@ -167,27 +167,27 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 2. Load DMNB-cAMP or DEACM-cAMP as in Phase 2 (50–200 µM, 20–30 min, dark, room temperature or 10–30 µM); wash.
 
 **Levitation run:**
-1. Dispense a cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
+1. Dispense a 3 µL cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
 2. Deliver UV flash (trigger, t = 0).
 3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in the SDC/Tris denaturant quench droplet and collect.
-4. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
+4. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C. 
+5. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
 
 **Sample processing and MS** (Section 5.6 for full detail):
-1. Digest each quenched droplet sample.
-2. Label with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
-3. Phosphopeptide enrichment (Fe-IMAC or TiO₂) on the pooled/combined sample; standard low-input IMAC protocols apply directly.
-4. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
+1. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
+2. Phosphopeptide enrichment (Fe-IMAC or TiO₂) on the pooled/combined sample; standard low-input IMAC protocols apply directly.
+3. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
 
 **Analysis:** Plot phospho-CREB S133, phospho-VASP S157, and pan-RRXS/T-motif site abundance vs. time; fit a simple rise/plateau model; compare the fitted time constant to the Western blot (Phase 1/2). Agreement across all three readouts is the key validation claim.
 
 ---
 
-## Section 5.6 / Phase 5: Cardiomyocyte-Protein-Matched Levitated Time Course (Weeks 10–13)
+## Phase 5: Cardiomyocyte-Protein-Matched Levitated Time Course (Weeks 10–13)
 
 **Goal:** Repeat the Phase 4 experiment at ~15–20 cells/droplet (~3–6 ng protein — matched to one adult cardiomyocyte) using targeted MS, to directly support the R01's core feasibility claim.
 
 **Differences from Phase 4:**
-1. Dilute the single-cell suspension so that each ~1–2 µL droplet receives ~15–20 cells (Poisson-load and verify by imaging/counting each droplet before the run — record actual cell number per droplet as a covariate).
+1. Dilute the single-cell suspension so that each ~2–5 µL droplet receives ~15–20 cells (Poisson-load and verify by imaging/counting each droplet before the run — record actual cell number per droplet as a covariate).
 2. Reduce quench-denaturant volume proportionally (e.g., EasyPhos-style 4% sodium deoxycholate/100 mM Tris pH 8.5, merged at ~1:5–1:10 dilution into the working droplet) to keep total processed volume compatible with nanoPOTS-scale or low-bind-well digestion.
 3. Go straight to targeted acquisition (PRM with heavy synthetic peptide standards) on a short pre-selected panel built from the Phase 4 discovery data: phospho-CREB S133, phospho-VASP S157, and 2–3 top RRXS/T-motif sites that showed the cleanest, most reproducible kinetics in Phase 4.
 4. Time points: reduce to 5 (0, 30 s, 60 s, 120 s, 300 s) to conserve replicate budget; n = 5–6 droplets per time point given the expected higher variance at low input.
