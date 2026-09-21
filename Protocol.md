@@ -162,6 +162,8 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 
 **Goal:** Establish a clean, well-powered PKA time course at a cell number large enough to be comfortably within standard phosphoproteomics sensitivity, and generate a spectral library for the harder Phase 5 experiment.
 
+**Concerns**: Phase 3 successfully establishes whether quench reagent SDC/Tris is sufficient for immediate quench and characterizes the quench delay on purified protein. However, here there is the added variable of cell lysis in phases 4 and 5. How can we know if cell lysis AND quenching is performed sufficiently when working with intact cells as opposed to purified protein? 
+
 **Cell preparation:**
 1. Trypsinize a confluent flask to single-cell suspension; count and resuspend in HEPES-buffered saline (no serum, no phenol red) at a concentration allowing ~1,000–5,000 cells per ~2–5 µL droplet.
 2. Load DMNB-cAMP or DEACM-cAMP as in Phase 2 (50–200 µM, 20–30 min, dark, room temperature or 10–30 µM); wash.
@@ -169,9 +171,9 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 **Levitation run:**
 1. Dispense a 3 µL cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
 2. Deliver UV flash (trigger, t = 0).
-3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in the SDC/Tris denaturant quench droplet and collect.
-4. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C. 
-5. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
+3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL of SDC/Tris denaturant quench droplet. Note: the pH now is too low for trypsin enzymatic activity; how can it be brought up, and how long should the quench last before neutralizing it and adding trypsin?
+5. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C. 
+6. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
 
 **Sample processing and MS** (Section 5.6 for full detail):
 1. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
