@@ -171,7 +171,7 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 **Levitation run:**
 1. Dispense a 3 µL cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
 2. Deliver UV flash (trigger, t = 0).
-3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL of SDC/Tris denaturant quench droplet. Note: the pH now is too low for trypsin enzymatic activity; how can it be brought up, and how long should the quench last before neutralizing it and adding trypsin?
+3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL of SDC/Tris denaturant quench droplet. Note: SDC requires removal via acid precipitation prior to mass spec; how can this be achieved with low sample input?
 5. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C. 
 6. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
 
