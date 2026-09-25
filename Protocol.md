@@ -84,7 +84,7 @@ Levitate a droplet, inject a second droplet containing fluorescent dye (e.g., fl
 ### 3b. Trigger-to-Quench Jitter
 Fire the full trigger→delay→quench sequence 50–100 times against a high-speed camera timestamp. Report the mean ± SD of realized delay vs. programmed delay.
 
-### 3c. Determining How Accurately the LevCell Can Reproduce a Known Biochemical Reaction
+### 3c. Determining How Accurately the Levcell Can Reproduce a Known Biochemical Reaction
 This directly benchmarks whether your denaturant quench (Section 5.6) actually stops phosphorylation on contact.
 
 #### 3c(i). Enzyme Linearity Assay and Steady-State Kinetics
@@ -151,7 +151,7 @@ Split quenched samples into two processing arms:
 
 Compare phospho-Kemptide concentrations between the two arms at each reaction time point. If the quench is effective, the immediate and delayed samples should produce statistically indistinguishable phospho-Kemptide concentrations, indicating negligible post-quench phosphorylation.
 
-**Containerless control:** Repeat with 3 time points and 6 samples; 3 in the Levcell, 3 in tubes. Compare quench efficiencies, immediate processing. Use the robotic arm to dispense reaction mixture and quench buffer to each. 
+**Containerless control:** In a 384-well plate, perform parallel well-based reactions using same volumes and automated addition using robotic arm. 
 
 **Deliverable for this phase:** One figure with three panels (mixing time, quench progress curves, jitter histogram) — this is the platform-characterization core of the eventual paper and should be finalized before Phase 4 cell work begins.
 
@@ -164,20 +164,21 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 **Concerns**: Phase 3 successfully establishes whether quench reagent SDC/Tris is sufficient for immediate quench and characterizes the quench delay on purified protein. However, here there is the added variable of cell lysis in phases 4 and 5. How can we know if cell lysis AND quenching is performed sufficiently when working with intact cells as opposed to purified protein? 
 
 **Cell preparation:**
-1. Trypsinize a confluent plate to single-cell suspension; count and resuspend in HEPES-buffered saline (no serum, no phenol red) at a concentration allowing ~1,000–5,000 cells per ~2–5 µL droplet.
-2. Load DMNB-cAMP or DEACM-cAMP as in Phase 2 (50–200 µM, 20–30 min, dark, room temperature or 10–30 µM); wash.
+- Trypsinize a confluent plate to single-cell suspension; count and resuspend in HEPES-buffered saline (no serum, no phenol red) loaded with caged cAMP and IBMX at a concentration allowing ~1,000–5,000 cells per ~2–5 µL droplet.
 
 **Levitation run:**
 1. Dispense a 3 µL cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
 2. Deliver UV flash (trigger, t = 0).
 3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL 4% SDC/100mM Tris denaturant quench droplet. Note: refer to EasyPhos-style buffer to eliminate protein precipitation steps and maintain trypsin-suitable conditions. 
 5. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C.
-6. Transfer samples to low-bind tubes for TMT-labeling. Dilute each sample with dd water to ~0.1-0.2% SDC. Add formic acid to quench the digestion. 
-7. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
-8. Combine samples (pooled sample), perform phosphopeptide enrichment on pooled sample following the uPhos workflow. 
-10. Load samples into Evotips. 
-11. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
-12. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
+6. Add 50-100% isopropanol to each sample to solubilize SDC.
+7. Quench digestion by adding formic acid.
+8. Transfer samples to low-bind tubes for TMT-labeling. 
+9. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
+10. Combine samples (pooled sample), perform phosphopeptide enrichment on pooled sample following the uPhos workflow. 
+11. Load samples into Evotips. 
+12. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
+13. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
 
 **Analysis:** Plot phospho-CREB S133, phospho-VASP S157, and pan-RRXS/T-motif site abundance vs. time; fit a simple rise/plateau model; compare the fitted time constant to the Western blot (Phase 1/2). Agreement across all three readouts is the key validation claim.
 
