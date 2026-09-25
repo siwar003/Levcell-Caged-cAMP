@@ -1,4 +1,4 @@
-# Levcell Caged cAMP Project Protocol (NOT final)
++# Levcell Caged cAMP Project Protocol (NOT final)
 
 ## Phase 0: Culture HEK Cells, Control Experiment, and Order Reagents
 
@@ -103,11 +103,11 @@ This directly benchmarks whether your denaturant quench (Section 5.6) actually s
 - 0.2 mM ATP
 
 *Peptide substrate:*
-- 130 µM Kemptide
+- 50-130 µM Kemptide
 
 **Step 2: Determine optimal reaction conditions**
 
-In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 20 mM magnesium acetate + 0.2 mM ATP + 50–130 µM Kemptide) + add 1 unit (volume depends on vial lot) of PKA catalytic subunit, then from 0–25 minutes, at 30 °C, aliquot 10 µL into 10 µL of quench buffer (30 mM acetic acid or SDC Tris).
+In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 20 mM magnesium acetate + 0.2 mM ATP + 50–130 µM Kemptide) + add 1 unit (volume depends on vial lot) of PKA catalytic subunit, then from 0–25 minutes, at 30 °C, aliquot 10 µL into 10 µL of quench buffer (30 mM acetic acid or SDC/Tris).
 
 - Try Kemptide concentrations 50 µM and 130 µM. After plotting time course from the LC-MS/MS phosphorylated-Kemptide results, choose the concentration that is needed for a linear initial velocity within the testing period.
 - Test 0, 1 min, 5 min, 10 min, 15 min, 20 min, 25 min.
@@ -115,11 +115,9 @@ In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 
 
 **LC-MS/MS quantification:** Generate an external calibration curve using known concentrations of synthetic phospho-Ser5 Kemptide. The calibration curve will relate the phospho-Kemptide/internal-standard peak-area ratio to phospho-Kemptide concentration.
 
-**Negative control:** Include a no-Kemptide control containing PKA, ATP, Mg²⁺, and reaction buffer. This control will identify background LC-MS/MS signals and potential interfering species.
-
 #### 3c(ii). Determining the Precision and Effectiveness of Levcell Reaction Quenching, Compared to Tube Performance
 
-**Objective:** Determine whether the LevCell quench terminates PKA-mediated phosphorylation rapidly and reproducibly, with minimal post-quench enzymatic activity.
+**Objective:** Determine whether the Levcell quench terminates PKA-mediated phosphorylation rapidly and reproducibly, with minimal post-quench enzymatic activity.
 
 **Prepare two solutions:**
 - **Stock A:** optimized Kemptide concentration, 20 mM Mg-acetate, 0.2 mM ATP, 40 mM Tris-HCl (pH 7.4).
@@ -128,8 +126,8 @@ In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 
 Concentrate the components such that mixing 4 µL of Stock A with 1 µL of Stock B produces the desired final reaction concentrations.
 
 **Levcell reaction and quench:**
-1. Levitate a 4 µL droplet of Stock A.
-2. Initiate the reaction by adding 1 µL of Stock B.
+1. Levitate six 4 µL droplets of Stock A, each representing a quench time point.
+2. Initiate the reaction by adding 1 µL of Stock B to each droplet.
 3. Allow the reaction to proceed for defined time intervals, before adding quench droplet:
    - 0 s
    - 1 min
@@ -137,8 +135,8 @@ Concentrate the components such that mixing 4 µL of Stock A with 1 µL of Stock
    - 15 min
    - 20 min
    - 25 min
-4. At each time point, rapidly transfer/quench the reaction using 1 µL of SDC/Tris quench buffer.
-5. Analyze phospho-Kemptide directly by LC-MS/MS without enzymatic digestion.
+4. At each time point, add 1 µL of 4% SDC/100 mM Tris (or 30 mM acetic acid) as quench buffer.
+5. Analyze phospho-Kemptide directly by LC-MS/MS without enzymatic digestion using the standard curve.
 
 The primary measurement will be phospho-Kemptide concentration as a function of time.
 
@@ -150,9 +148,7 @@ Split quenched samples into two processing arms:
 
 Compare phospho-Kemptide concentrations between the two arms at each reaction time point. If the quench is effective, the immediate and delayed samples should produce statistically indistinguishable phospho-Kemptide concentrations, indicating negligible post-quench phosphorylation.
 
-**Automation control:** Repeat but with 3 time points; 6 droplets; top 3 get automated addition, bottom 3 get manual addition; compare the quench efficiencies, immediate processing.
-
-**Containerless control:** Repeat with 3 time points and 6 samples; 3 in the LevCell, 3 in tubes. Compare quench efficiencies, immediate processing.
+**Containerless control:** Repeat with 3 time points and 6 samples; 3 in the Levcell, 3 in tubes. Compare quench efficiencies, immediate processing. Use the robotic arm to dispense reaction mixture and quench buffer to each. 
 
 **Deliverable for this phase:** One figure with three panels (mixing time, quench progress curves, jitter histogram) — this is the platform-characterization core of the eventual paper and should be finalized before Phase 4 cell work begins.
 
@@ -165,20 +161,20 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 **Concerns**: Phase 3 successfully establishes whether quench reagent SDC/Tris is sufficient for immediate quench and characterizes the quench delay on purified protein. However, here there is the added variable of cell lysis in phases 4 and 5. How can we know if cell lysis AND quenching is performed sufficiently when working with intact cells as opposed to purified protein? 
 
 **Cell preparation:**
-1. Trypsinize a confluent flask to single-cell suspension; count and resuspend in HEPES-buffered saline (no serum, no phenol red) at a concentration allowing ~1,000–5,000 cells per ~2–5 µL droplet.
+1. Trypsinize a confluent plate to single-cell suspension; count and resuspend in HEPES-buffered saline (no serum, no phenol red) at a concentration allowing ~1,000–5,000 cells per ~2–5 µL droplet.
 2. Load DMNB-cAMP or DEACM-cAMP as in Phase 2 (50–200 µM, 20–30 min, dark, room temperature or 10–30 µM); wash.
 
 **Levitation run:**
 1. Dispense a 3 µL cell-containing droplet onto the levitator; equilibrate at 37 °C, humidified, for 5 min.
 2. Deliver UV flash (trigger, t = 0).
-3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL of SDC/Tris denaturant quench droplet. Note: SDC requires removal via acid precipitation prior to mass spec; how can this be achieved with low sample input? Should the SDC/Tris be preheated to 95 C prior to addition to aid lysis? Refer to "A Rapid One-Pot Workflow for Sensitive Microscale Phosphoproteomics" paper.
-5. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C. 
-6. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
-
-**Sample processing and MS** (Section 5.6 for full detail):
-1. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
-2. Phosphopeptide enrichment (Fe-IMAC or TiO₂) on the pooled/combined sample; standard low-input IMAC protocols apply directly.
-3. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
+3. At each of 7 time points: 0 (no-flash control), 15 s, 30 s, 60 s, 120 s, 300 s, 600 s, merge in 1 µL 4% SDC/100mM Tris denaturant quench droplet. Note: refer to EasyPhos-style buffer to eliminate protein precipitation steps and maintain trypsin-suitable conditions. 
+5. Add 1 µL of trypsin gold (+ CaCl2) to digest the droplet for 15 min at 37 °C.
+6. Transfer samples to low-bind tubes for TMT-labeling. Dilute each sample with dd water to ~0.1-0.2% SDC. Add formic acid to quench the digestion. 
+7. Label digests with TMTpro (7 time points + 2 controls fits an 11- or 16-plex easily, leaving room for a pooled reference channel).
+8. Combine samples (pooled sample), perform phosphopeptide enrichment on pooled sample following the uPhos workflow. 
+10. Load samples into Evotips. 
+11. LC-MS/MS, DIA; search against human proteome with phospho as a variable modification.
+12. Run n = 4 biological replicate droplets per time point (independent thaws/passages on different days), plus the two Phase-2-style controls (UV-only, caged-compound-only) at the 60 s point.
 
 **Analysis:** Plot phospho-CREB S133, phospho-VASP S157, and pan-RRXS/T-motif site abundance vs. time; fit a simple rise/plateau model; compare the fitted time constant to the Western blot (Phase 1/2). Agreement across all three readouts is the key validation claim.
 
@@ -201,10 +197,11 @@ Compare phospho-Kemptide concentrations between the two arms at each reaction ti
 
 ## Section 5.7: Sample Processing (Shared Protocol for Phases 4–5)
 
-1. **Quench:** Merge quench droplet (SDC/Tris-based lysis-denaturation buffer with TCEP/CAA for simultaneous reduction/alkylation) directly into the stimulated droplet at the programmed time.
-2. **Transfer:** Aspirate the merged droplet into a low-protein-binding tube or directly onto a nanoPOTS-type processing chip.
-3. **Digestion:** Trypsin/LysC, overnight, 37 °C, following standard SDC-compatible workflow (acid precipitation of SDC before or after digestion per your chosen protocol variant).
-4. **Desalting:** Evotip.
-5. **Phase 4 only — labeling and enrichment:** TMTpro labeling per manufacturer protocol scaled to peptide amount; Fe-IMAC or TiO₂ phosphopeptide enrichment on pooled multiplex.
-6. **Phase 5 — no enrichment:** spike heavy PRM standards for the targeted peptide panel prior to LC-MS injection.
-7. **LC-MS/MS:** nanoflow LC coupled to Orbitrap or equivalent; DIA for Phase 4, scheduled PRM for Phase 5.
+1. **Quench:** Merge quench droplet (SDC/Tris-based lysis-denaturation buffer with TCEP/CAA for simultaneous reduction/alkylation) directly into the stimulated droplet at the programmed time. Refer to EasyPhos buffer. 
+2. **Transfer:** Aspirate the merged droplet into a low-protein-binding tube or directly onto a nanoPOTS-type processing chip for phospho-peptide enrichment and TMT-labeling steps. Otherwise, transfer digests directly into pre-equilibrated Evotips.
+3. To prevent SDC precipitation during digestion quenching (addition of formic acid), add 50-100% isopropanol to solubilize the SDC then quench; however, since the organic solvent concentration now is too high for efficient peptide binding to C18 in Evotips, dilute in water 0.1% FA (solvent A) and load onto evotips; run a quick control experiment to test different concentrations and compare protein yield.
+4. **Digestion:** Trypsin, overnight, 37 °C, following standard SDC-compatible workflow. 
+5. **Desalting:** Evotip loading.
+6. **Phase 4 only — labeling and enrichment:** TMTpro labeling per manufacturer protocol scaled to peptide amount; Fe-IMAC or TiO₂ phosphopeptide enrichment on pooled multiplex.
+7. **Phase 5 — no enrichment:** spike heavy PRM standards for the targeted peptide panel prior to LC-MS injection.
+8. **LC-MS/MS:** nanoflow LC coupled to Orbitrap or equivalent; DIA for Phase 4, scheduled PRM for Phase 5.
