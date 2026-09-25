@@ -6,6 +6,7 @@
 - cAMP-dependent protein kinase A catalytic subunit (Promega, 1 × 2,500 u)
 - Kemptide PKA peptide substrate (Promega, 10 mg/mL)
 - ATP 100 mM stock solution
+- TiO2 bead solution (1 mg/uL) NOTE: we have TiO2 spin tips (High Select TiO2 Phosphopeptide Enrichment Kit), but the uPhos protocol uses TiO2 beads; I can try to adjust the protocol to use the tips, instead.
 - OPTIONAL: Synthetic [Phospho-Ser5]kemptide for standard curve (50 mg)
     - For low input phosphoproteomics during phases 3–5
 - Western blot antibodies: anti-CREB, anti-pCREB (Ser133), anti-PKA pan-substrate, anti-VASP (Ser157)
