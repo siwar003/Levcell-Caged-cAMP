@@ -2,7 +2,7 @@
 
 ## Phase 0: Culture HEK Cells, Control Experiment, and Order Reagents
 
-**Materials:** HEK293 (ATCC CRL-1573), DMEM high glucose, 10% FBS, 1% penicillin/streptomycin, 0.25% trypsin-EDTA, 60 mm plate, DMSO, freezing medium (90% FBS/10% DMSO).
+**Materials:** HEK293 (ATCC CRL-1573), DMEM high glucose, 10% FBS, 1% penicillin/streptomycin, 0.25% trypsin-EDTA, 60 mm plate, freezing medium (20% FBS, 70% DMEM, 10% DMSO).
 
 **Protocol:**
 1. Thaw one vial of HEK293 cells into a 60 mm culture dish; culture at 37 °C, 5% CO₂ in DMEM + 10% FBS + P/S.
@@ -105,9 +105,12 @@ This directly benchmarks whether your denaturant quench (Section 5.6) actually s
 *Peptide substrate:*
 - 50-130 µM Kemptide
 
+*Quench buffer* 
+- 4% SDC, 100 mM Tris pH 8.5 
+
 **Step 2: Determine optimal reaction conditions**
 
-In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 20 mM magnesium acetate + 0.2 mM ATP + 50–130 µM Kemptide) + add 1 unit (volume depends on vial lot) of PKA catalytic subunit, then from 0–25 minutes, at 30 °C, aliquot 10 µL into 10 µL of quench buffer (30 mM acetic acid or SDC/Tris).
+In a tube, have 100 µL total reaction mixture volume (40 mM Tris-HCl, pH 7.4 + 20 mM magnesium acetate + 0.2 mM ATP + 50–130 µM Kemptide) + add 1 unit (volume depends on vial lot) of PKA catalytic subunit, then from 0–25 minutes, at 30 °C, aliquot 10 µL into 10 µL of quench buffer (SDC/Tris).
 
 - Try Kemptide concentrations 50 µM and 130 µM. After plotting time course from the LC-MS/MS phosphorylated-Kemptide results, choose the concentration that is needed for a linear initial velocity within the testing period.
 - Test 0, 1 min, 5 min, 10 min, 15 min, 20 min, 25 min.
@@ -135,7 +138,7 @@ Concentrate the components such that mixing 4 µL of Stock A with 1 µL of Stock
    - 15 min
    - 20 min
    - 25 min
-4. At each time point, add 1 µL of 4% SDC/100 mM Tris (or 30 mM acetic acid) as quench buffer.
+4. At each time point, add 1 µL of 4% SDC/100 mM Tris as quench buffer.
 5. Analyze phospho-Kemptide directly by LC-MS/MS without enzymatic digestion using the standard curve.
 
 The primary measurement will be phospho-Kemptide concentration as a function of time.
